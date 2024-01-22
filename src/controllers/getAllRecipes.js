@@ -16,9 +16,9 @@ const getAllRecipes = async()=>{
         }],
       })
     
-    // const apiRecipesRaw = (await axios.get(`${URL}`)).data.results
-    // const apiRecipes = cleanRecipes(apiRecipesRaw);
-    const apiRecipes = cleanRecipes(auxiliarRecipes)
+    const apiRecipesRaw = (await axios.get(`${URL}`)).data.results
+    const apiRecipes = cleanRecipes(apiRecipesRaw);
+    //const apiRecipes = cleanRecipes(auxiliarRecipes)
     const dataBaseRecipes = cleanRecipesDB(dataBaseRaw)
     return [...dataBaseRecipes, ...apiRecipes]
 

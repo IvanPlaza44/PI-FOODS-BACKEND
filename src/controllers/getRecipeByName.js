@@ -8,11 +8,6 @@ const URL = `https://api.spoonacular.com/recipes/complexSearch?apiKey=${API_KEY}
 
 
 const getRecipeByName = async (name)=>{
-    
-
-
-
-
 
     const dataBaseRecipeRaw = await Recipe.findAll({
         where: {name: {[Op.iLike]: `%${name}%`}},
